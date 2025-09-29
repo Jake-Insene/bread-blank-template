@@ -4,17 +4,7 @@ project("project-name")
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-if(MSVC)
-    set(CMAKE_CXX_FLAGS "${CMAKE_FLAGS} /GR- /EHsc- /Zc:preprocessor")
-    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Release>:>")
-else()
-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
-    set(CMAKE_CXX_FLAGS
-        "${CMAKE_CXX_FLAGS} -fno-rtti -fno-exceptions -Wall -Wextra"
-    )
-endif()
-
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
@@ -52,13 +42,12 @@ elseif(WIN32)
       WIN32
       ${GAME_SRC}
     )
-    if(MSVC)
-        set_target_properties("project-name" PROPERTIES LINK_FLAGS "/ENTRY:wWinMainCRTStartup")
-    endif()
 endif()
 
 
 target_compile_definitions("project-name" PUBLIC ${BREAD_BUILD_DEFINITIONS})
+target_compile_options("project-name" PUBLIC ${BREAD_COMPILE_OPTIONS})
+target_link_options("project-name" PUBLIC ${BREAD_EXE_LINK_OPTIONS})
 
 target_include_directories(
     "project-name"

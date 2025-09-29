@@ -8,11 +8,11 @@
 
 
 EngineConfiguration(
-	.WindowSize = Vector2I(1280, 720),
-	.DisplayTargetSize = Vector2I(1280, 720),
-	.CreateMainScene = DefaultCreateScene(MainScene),
-	.VSync = true,
-	.EnableDebugConsole = true,
+	.window_size = Vector2I(1280, 720),
+	.create_main_scene = DefaultCreateScene(MainScene),
+	.vsync = true,
+	.keep_viewport = true,
+	.enable_debug_console = true,
 );
 
 PreloadBegin()

@@ -4,8 +4,8 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "CMake Debug",
-            "command": "cmake -B build -DCMAKE_BUILD_TYPE=Debug -G Ninja",
+            "label": "CMake Debug x64",
+            "command": "cmake -B build -DCMAKE_BUILD_TYPE=Debug -DBREAD_TARGET_ARCH=X64 -G Ninja",
             "type": "shell",
             "group": {
                 "kind": "build",
@@ -13,8 +13,8 @@
             }
         },
         {
-            "label": "CMake Release",
-            "command": "cmake -B build -DCMAKE_BUILD_TYPE=Release -G Ninja",
+            "label": "CMake Release x64",
+            "command": "cmake -B build -DCMAKE_BUILD_TYPE=Release -DBREAD_TARGET_ARCH=X64 -G Ninja",
             "type": "shell",
             "group": {
                 "kind": "build",
