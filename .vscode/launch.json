@@ -6,19 +6,27 @@
     "configurations": [
         {
             "preLaunchTask": "CMake Build",
-            "name": "Launch Debug",
+            "name": "launch debug",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/debug/project-name",
+            "program": "${workspaceFolder}/build/bin/debugbuild/project-name",
             "cwd": "${workspaceFolder}"
         },
         {
             "preLaunchTask": "CMake Build",
-            "name": "Launch Release",
+            "name": "launch release",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/project-name",
+            "program": "${workspaceFolder}/build/bin/releasebuild/project-name",
             "cwd": "${workspaceFolder}"
         },
+        {
+            "preLaunchTask": "CMake Build",
+            "name": "launch game build",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/gamebuild/project-name",
+            "cwd": "${workspaceFolder}"
+        }
     ]
 }

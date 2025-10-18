@@ -8,7 +8,7 @@
 
 
 EngineConfiguration(
-	.window_size = Vector2I(1280, 720),
+	.viewport_size = Vector2I(1280, 720),
 	.create_main_scene = DefaultCreateScene(MainScene),
 	.vsync = true,
 	.keep_viewport = true,

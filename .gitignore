@@ -91,3 +91,9 @@ lint/tmp/
 
 # Clangd
 .cache
+
+# Bread Shader Files
+/assets/shaders/
+
+# Bread default resources
+/assets/default/

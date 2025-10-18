@@ -5,15 +5,22 @@
     {
       "type": "default",
       "project": "CMakeLists.txt",
-      "projectTarget": "project-name.exe (bin\\debug\\project-name.exe)",
+      "projectTarget": "project-name.exe (bin\\debugbuild\\project-name.exe)",
       "name": "launch debug",
       "currentDir": "${workspaceRoot}"
     },
     {
       "type": "default",
       "project": "CMakeLists.txt",
-      "projectTarget": "project-name.exe (bin\\project-name.exe)",
+      "projectTarget": "project-name.exe (bin\\releasebuild\\project-name.exe)",
       "name": "launch release",
+      "currentDir": "${workspaceRoot}"
+    },
+    {
+      "type": "default",
+      "project": "CMakeLists.txt",
+      "projectTarget": "project-name.exe (bin\\gamebuild\\project-name.exe)",
+      "name": "launch game build",
       "currentDir": "${workspaceRoot}"
     }
   ]

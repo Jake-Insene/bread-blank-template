@@ -11,6 +11,6 @@ struct MainScene : Object2D
     void enter();
     void exit();
 
-    void update(f64 dt);
+    void update(f32 dt);
 };
 
