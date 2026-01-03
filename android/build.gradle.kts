@@ -16,6 +16,12 @@ android {
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")
         }
+
+        externalNativeBuild {
+            cmake {
+                arguments += "-DBREAD_ANDROID=YES"
+            }
+        }
     }
 
     sourceSets {

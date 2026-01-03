@@ -2,11 +2,7 @@ package com.example;
 
 import android.os.Bundle;
 import android.app.NativeActivity;
-import android.view.Surface;
-import android.view.SurfaceHolder;
 import android.view.View;
-import android.view.Window;
-
 
 public class AppActivity extends NativeActivity {
     

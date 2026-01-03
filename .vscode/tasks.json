@@ -4,26 +4,18 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "CMake Debug x64",
-            "command": "cmake -B build -DCMAKE_BUILD_TYPE=Debug -DBREAD_TARGET_ARCH=X64 -G Ninja",
-            "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            "label": "CMake Release x64",
-            "command": "cmake -B build -DCMAKE_BUILD_TYPE=Release -DBREAD_TARGET_ARCH=X64 -G Ninja",
-            "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
             "label": "CMake Build",
             "command": "cmake --build build",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "dependsOn": "CMake Build",
+            "label": "CMake Pre Launch",
+            "command": "cmake -E copy_directory ${workspaceFolder}/bread/assets/ ${workspaceFolder}/assets/",
             "type": "shell",
             "group": {
                 "kind": "build",
