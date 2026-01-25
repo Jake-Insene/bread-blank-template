@@ -1,16 +1,15 @@
 #pragma once
-#include "2d/object_2d.h"
+#include "scene/scene.h"
 
 
-struct MainScene : Object2D
+
+struct MainScene : Scene
 {
-    OBJECT(MainScene, Object2D);
+    SCENE_BODY(MainScene, Scene);
 
-    void init(const CreateInfo&);
+    void on_enter();
+    void on_exit();
 
-    void enter();
-    void exit();
-
-    void update(f32 dt);
+    void on_update(f32 dt);
 };
 

@@ -2,7 +2,6 @@
 
 #include "engine/engine.h"
 #include "scene/scene_manager.h"
-#include "object/object_allocator.h"
 #include "resource/resource_manager.h"
 #include "resource/tile_set.h"
 

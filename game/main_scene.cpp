@@ -1,19 +1,14 @@
 #include "game/main_scene.h"
 
-void MainScene::init(const CreateInfo&)
-{
-    mark(MARK_UPDATE);
-    mark(MARK_EVENT);
-}
 
-void MainScene::enter()
+void MainScene::on_enter()
 {
 }
 
-void MainScene::exit()
+void MainScene::on_exit()
 {
 }
 
-void MainScene::update(f32)
+void MainScene::on_update(f32)
 {
 }
