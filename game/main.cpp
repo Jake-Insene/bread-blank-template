@@ -1,18 +1,20 @@
-#include "game/main_scene.h"
+#include "engine/main.h"
 
-#include "engine/engine.h"
-#include "scene/scene_manager.h"
-#include "resource/resource_manager.h"
-#include "resource/tile_set.h"
+#include "game/my_game.h"
 
 
-EngineConfiguration(
-	.viewport_size = Vector2I(1280, 720),
-	.create_main_scene = DefaultCreateScene(MainScene),
-	.vsync = true,
-	.keep_viewport = true,
-	.enable_debug_console = true,
-);
+ApplicationInfo __get_application_info__()
+{
+	return ApplicationInfo
+	{
+		.size_in_bytes = sizeof(MyGame),
+		.alignment = alignof(MyGame),
+		.constructor = [](Opaque* obj, const ApplicationAllocateInfo& alloc_info)
+		{
+			ConstructObject(*obj->cast<MyGame*>(), alloc_info);
+		},
+		.initial_window_size = Vector2I(1280, 720),
+		.enable_debug_console = true,
+	};
+}
 
-PreloadBegin()
-PreloadEnd()

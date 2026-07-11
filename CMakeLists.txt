@@ -6,7 +6,17 @@ add_subdirectory("bread")
 
 file(GLOB GAME_SRC
     game/main.cpp
-    game/main_scene.cpp
+    game/my_game.cpp
 )
 
-bread_project("project-name" ${GAME_SRC})
+bread_project(
+    NAME
+        "project-name"
+
+    PACKAGES
+        
+
+    SOURCES
+        ${GAME_SRC}
+)
+
