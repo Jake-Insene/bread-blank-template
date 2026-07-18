@@ -13,14 +13,10 @@
             }
         },
         {
-            "dependsOn": "CMake Build",
-            "label": "CMake Pre Launch",
-            "command": "cmake -E copy_directory ${workspaceFolder}/bread/assets/ ${workspaceFolder}/assets/",
+            "dependsOn" : "CMake Build",
+            "label": "Pre Launch",
+            "command": "${workspaceFolder}/prerun.bat ${workspaceFolder}",
             "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
         }
     ]
 }
