@@ -1,6 +1,7 @@
-#include "engine/main.h"
+#include <Runtime/Main.hpp>
+#include <os/os.h>
 
-#include "game/my_game.h"
+#include "game/my_game.hpp"
 
 
 ApplicationInfo __get_application_info__()
@@ -9,12 +10,15 @@ ApplicationInfo __get_application_info__()
 	{
 		.size_in_bytes = sizeof(MyGame),
 		.alignment = alignof(MyGame),
-		.constructor = [](Opaque* obj, const ApplicationAllocateInfo& alloc_info)
+		.constructor = [](Core::Opaque* obj, const ApplicationAllocateInfo& alloc_info)
 		{
-			ConstructObject(*obj->cast<MyGame*>(), alloc_info);
+			Core::Mem::Placement(*obj->cast<MyGame*>(), alloc_info);
 		},
-		.initial_window_size = Vector2I(1280, 720),
-		.enable_debug_console = true,
 	};
 }
 
+ApplicationInfo RegisterApplication()
+{
+    OS::set_current_directory("assets");
+	return __get_application_info__();
+}

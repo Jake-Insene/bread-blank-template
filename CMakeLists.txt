@@ -3,6 +3,7 @@ project("project-name")
 
 include("bread/cmake/engine.cmake")
 add_subdirectory("bread")
+add_subdirectory("packages/Basic")
 
 file(GLOB GAME_SRC
     game/main.cpp
@@ -14,7 +15,7 @@ bread_project(
         "project-name"
 
     PACKAGES
-        
+        "Basic"
 
     SOURCES
         ${GAME_SRC}

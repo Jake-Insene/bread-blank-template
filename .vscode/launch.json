@@ -5,28 +5,31 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "preLaunchTask": "CMake Pre Launch",
+            "preLaunchTask": "Pre Launch",
             "name": "launch debug",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/build/bin/debugbuild/project-name",
-            "cwd": "${workspaceFolder}"
+            "cwd": "${workspaceFolder}",
+            "initCommands": ["command script import bread/lldb_fmt.py"],
         },
         {
-            "preLaunchTask": "CMake Pre Launch",
+            "preLaunchTask": "Pre Launch",
             "name": "launch release",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/build/bin/releasebuild/project-name",
-            "cwd": "${workspaceFolder}"
+            "cwd": "${workspaceFolder}",
+            "initCommands": ["command script import bread/lldb_fmt.py"],
         },
         {
-            "preLaunchTask": "CMake Pre Launch",
+            "preLaunchTask": "Pre Launch",
             "name": "launch game build",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/build/bin/gamebuild/project-name",
-            "cwd": "${workspaceFolder}"
+            "cwd": "${workspaceFolder}",
+            "initCommands": ["command script import bread/lldb_fmt.py"],
         }
     ]
 }

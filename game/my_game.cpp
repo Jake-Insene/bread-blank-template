@@ -1,4 +1,4 @@
-#include "game/my_game.h"
+#include "game/my_game.hpp"
 
 
 void MyGame::initialize(const ApplicationInitializeInfo& init_info)

@@ -1,13 +1,13 @@
 #pragma once
-#include "engine/application.h"
+#include <Basic/Templates/GraphicsApplication.hpp>
 
 
 
-struct MyGame : Application
+struct MyGame : Basic::GraphicsApplication
 {
-    using Base = Application;
+    using Base = Basic::GraphicsApplication;
 
-    using Application::Application;
+    using Base::Base;
 
     virtual void initialize(const ApplicationInitializeInfo& init_info) override;
     virtual void shutdown() override;

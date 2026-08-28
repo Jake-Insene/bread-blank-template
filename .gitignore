@@ -93,7 +93,4 @@ lint/tmp/
 .cache
 
 # Bread Shader Files
-/assets/shaders/bread/
-
-# Bread default resources
-/assets/default/
+/assets/shaders/packages/

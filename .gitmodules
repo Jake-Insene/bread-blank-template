@@ -1,3 +1,6 @@
 [submodule "bread"]
 	path = bread
 	url = https://github.com/Jake-Insene/bread.git
+[submodule "packages/Basic"]
+	path = packages/Basic
+	url = https://github.com/Jake-Insene/Basic
