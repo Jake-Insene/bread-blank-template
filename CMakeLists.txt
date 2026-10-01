@@ -6,8 +6,8 @@ add_subdirectory("bread")
 add_subdirectory("packages/Basic")
 
 file(GLOB GAME_SRC
-    game/main.cpp
-    game/my_game.cpp
+    Game/Main.cpp
+    Game/MyGame.cpp
 )
 
 bread_project(
